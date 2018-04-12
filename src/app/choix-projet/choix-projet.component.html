@@ -1,0 +1,66 @@
+
+
+  
+    <div class="container body-content">
+        
+
+
+<h2 class="flow-text blue-text darken-2">Mes projets en cours :</h2>
+
+<p>
+	<!-- à implémenter à la generation de chaque projet dans la liste  -->
+</p>
+      <table class="table">
+        <thead>
+          <tr>
+              <th>Nom du projet</th>
+              <th>Token restants</th>
+              <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let project of myProjects">
+            <td>{{project.nom}}</td>
+            <td>{{project.tokenmax}}</td>
+            <td><button (click)="openProject(project.nom)" data-target="editp" class="modal-trigger btn waves-effect blue darken-2 btn-co">Voir ce projet</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+	
+
+	
+	
+	
+	  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+	
+ <!-- Modal Teams Creation Structure -->
+ <div id="createt" class="modal modal-fixed-footer">		
+	<form action="/Projets/Create" method="post">
+		<div class="modal-content col s6">
+			<h2 class="flow-text blue-text darken-2">Créer une nouvelle equipe :</h2>
+			<div class="row">
+				<label>Personne à ajouter :</label>
+				<select multiple>
+				<option value="1">Valentin</option>
+				<option value="2">Benjamin</option>
+				<option value="3">Maxime</option>
+				</select>
+			</div>
+			
+			<div class="modal-footer col s6">
+				<input type="submit" value="Créer" class="btn btn-default blue darken-2" />
+				<a class="btn waves-effect blue darken-2 btn-co check_circle" href="/ws/ListProjects">Annuler</a>
+			</div>
+		</div>
+	</form>
+ </div>

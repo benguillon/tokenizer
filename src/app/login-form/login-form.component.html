@@ -1,0 +1,54 @@
+<div class="section"></div>
+<div class="container body-content">
+	<img align="center" class="responsive-img img" style="width: 250px;" src="https://i.imgur.com/bsxiVmY.png" />
+	<h2 class="flow-text blue-text darken-2 textindex">Se connecter</h2>
+	<div class="row mt50">
+		<div class="col s6 offset-s3">
+			<section>
+				<form (submit)="loginUser($event)">
+					<hr />
+					<div class="text-danger validation-summary-valid" data-valmsg-summary="true">
+						<ul>
+							<li style="display:none"></li>
+						</ul>
+					</div>
+					<div class="form-group">
+						<input type="email" name="login" placeholder="E-mail" data-val="true" data-val-email="Veuillez entrer un e-mail valide."
+						 data-val-required="Un e-mail est requis." id="Email" name="Email" value="" />
+						<span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+					</div>
+					<div class="form-group">
+						<input type="password" name="pwd" placeholder="Mot de passe" data-val="true" data-val-required="Un mot de passe est requis."
+						 id="Password" name="Password" />
+						<span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+					</div>
+
+					<div class="form-group switch">
+						<label>
+							Se souvenir de moi?
+							<input type="checkbox" data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe"
+							 value="true">
+							<span class="lever"></span>
+						</label>
+						<button class="btn waves-effect blue darken-2 btn-co check_circle" type="submit" name="action">Connexion</button>
+					</div>
+
+
+					<div class="form-group">
+						<p>
+							<a href="/Account/ForgotPassword">Mot de passe oublié?</a>
+						</p>
+						<p>
+							<a href="/Account/Register">Pas encore inscrit?</a>
+						</p>
+					</div>
+					<input name="__RequestVerificationToken" type="hidden" value="CfDJ8OGAW0zH5MREj9ULWalpuCXCiXy7FpNoT-Zei50eSFh7GMdxt4rTjm9SBWItykjILfBA1wd9fihGRA7I5rXC870QWdPiNt_xzRa2rUZ5fhdd_KkG-BYttZUda9OKOFNbP_Df4jtiL6U2a8RglyKF6Wg"
+					/>
+					<input name="RememberMe" type="hidden" value="false" />
+				</form>
+			</section>
+		</div>
+	</div>
+
+	<div class="section"></div>
+	<div class="section"></div>

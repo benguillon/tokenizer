@@ -1,0 +1,30 @@
+
+  
+<div>	
+		<h2 class="flow-text blue-text darken-2">Modifier ou supprimer le projet :</h2>
+		<form action="/Projets/Create" method="post">
+			<hr />
+			<label>Nom du projet</label>
+			<div class="form-group">
+					<input type="text" name="projectname2" placeholder={{project.nom}} value="" />
+        </div>
+      <label>Nombre de tokens attribués</label>
+			<div class="form-group">
+					<input type="password" name="tkn2" placeholder={{project.tokenmax}}/>
+				</div>
+				
+			<div class = "row">
+				<label>Groupe à ajouter :</label>
+				<select>
+					<option value = "1">B3 EPSI</option>
+					<option value = "2">B3 WIS</option>
+					<option value = "3">B2 EPSI</option>
+				</select>               
+      </div>
+	
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Modifier" class="btn btn-default blue darken-2" />
+				    <a class="btn waves-effect blue darken-2 btn-co check_circle" routerLink='/manageProject'>Retour à la liste</a>	
+			</div>
+	 </div>
